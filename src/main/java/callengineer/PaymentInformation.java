@@ -26,6 +26,9 @@ public class PaymentInformation  {
         System.out.println("\n\n##### this.getCallId()    " + this.getCallId());
         System.out.println("\n\n##### this.getStatus()    " + this.getStatus());
         BeanUtils.copyProperties(this, paymentApproved);
+
+        System.out.println("\n\n##### paymentApproved.toJson() : " + paymentApproved.toJson() + "\n\n");
+
         paymentApproved.publishAfterCommit();
 
     }
