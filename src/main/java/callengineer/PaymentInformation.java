@@ -25,6 +25,8 @@ public class PaymentInformation  {
         paymentApproved.setStatus(this.getStatus());
         System.out.println("\n\n##### this.getCallId()    " + this.getCallId());
         System.out.println("\n\n##### this.getStatus()    " + this.getStatus());
+        System.out.println("\n\n##### paymentApproved.getCallId()    " + paymentApproved.getCallId());
+        System.out.println("\n\n##### paymentApproved.getStatus()    " + paymentApproved.getStatus());
         System.out.println("\n\n##### paymentApproved.toJson() : " + paymentApproved.toJson() + "\n\n");
         BeanUtils.copyProperties(this, paymentApproved);
 
