@@ -21,14 +21,19 @@ public class PaymentInformation  {
     @PostPersist
     public void onPostPersist(){
         PaymentApproved paymentApproved = new PaymentApproved();
-        paymentApproved.setCallId(this.getCallId());
-        paymentApproved.setStatus(this.getStatus());
+        paymentApproved.setCallId(Long.valueOf(11));
+        paymentApproved.setStatus("1");
         System.out.println("\n\n##### this.getCallId()    " + this.getCallId());
         System.out.println("\n\n##### this.getStatus()    " + this.getStatus());
-        System.out.println("\n\n##### paymentApproved.getCallId()    " + paymentApproved.getCallId());
-        System.out.println("\n\n##### paymentApproved.getStatus()    " + paymentApproved.getStatus());
+        
         System.out.println("\n\n##### paymentApproved.toJson() : " + paymentApproved.toJson() + "\n\n");
         BeanUtils.copyProperties(this, paymentApproved);
+
+        paymentApproved.setCallId(this.getCallId());
+        paymentApproved.setStatus(this.getStatus());
+
+        System.out.println("\n\n##### paymentApproved.getCallId()    " + paymentApproved.getCallId());
+        System.out.println("\n\n##### paymentApproved.getStatus()    " + paymentApproved.getStatus());
 
         System.out.println("\n\n##### paymentApproved.toJson() : " + paymentApproved.toJson() + "\n\n");
 
