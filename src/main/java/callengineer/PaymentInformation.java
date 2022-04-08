@@ -23,6 +23,8 @@ public class PaymentInformation  {
         PaymentApproved paymentApproved = new PaymentApproved();
         paymentApproved.setCallId(this.getCallId());
         paymentApproved.setStatus(this.getStatus());
+        System.out.println("\n\n##### this.getCallId()    " + this.getCallId());
+        System.out.println("\n\n##### this.getStatus()    " + this.getStatus());
         BeanUtils.copyProperties(this, paymentApproved);
         paymentApproved.publishAfterCommit();
 
