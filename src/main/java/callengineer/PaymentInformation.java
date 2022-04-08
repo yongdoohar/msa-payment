@@ -21,6 +21,7 @@ public class PaymentInformation  {
     @PostPersist
     public void onPostPersist(){
         PaymentApproved paymentApproved = new PaymentApproved();
+        paymentApproved.setCallId()
         BeanUtils.copyProperties(this, paymentApproved);
         paymentApproved.publishAfterCommit();
 
@@ -50,7 +51,4 @@ public class PaymentInformation  {
         this.status = status;
     }
     
-
-
-
 }
