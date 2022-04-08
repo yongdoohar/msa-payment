@@ -21,7 +21,8 @@ public class PaymentInformation  {
     @PostPersist
     public void onPostPersist(){
         PaymentApproved paymentApproved = new PaymentApproved();
-        // paymentApproved.setCallId();
+        paymentApproved.setCallId(this.getCallId());
+        paymentApproved.setStatus(this.getStatus());
         BeanUtils.copyProperties(this, paymentApproved);
         paymentApproved.publishAfterCommit();
 

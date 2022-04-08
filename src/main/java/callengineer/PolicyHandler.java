@@ -22,12 +22,10 @@ public class PolicyHandler{
 
         System.out.println("\n\n##### listener CancelPayment : " + callRequestCanceled.toJson() + "\n\n");
 
-
-        
-
-        // Sample Logic //
-        // PaymentInformation paymentInformation = new PaymentInformation();
-        // paymentInformationRepository.save(paymentInformation);
+        PaymentInformation paymentInformation = new PaymentInformation();
+        paymentInformation.setCallId(callRequestCanceled.getId());
+        paymentInformation.setStatus("0");
+        paymentInformationRepository.save(paymentInformation);
 
     }
 
