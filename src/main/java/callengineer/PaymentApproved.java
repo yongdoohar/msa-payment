@@ -15,7 +15,7 @@ public class PaymentApproved extends AbstractEvent {
         return id;
     }
 
-    public void setId(Long Id) {
+    public void setId(Long id) {
         System.out.println("\n\n##### PaymentApproved test >> PaymentApproved.setId()    " + Id);
         this.id = id;
     }
@@ -23,7 +23,7 @@ public class PaymentApproved extends AbstractEvent {
         return callId;
     }
 
-    public void setCallId(Long CallId) {
+    public void setCallId(Long callId) {
         System.out.println("\n\n##### PaymentApproved test >> PaymentApproved.setCallId()    " + callId);
         this.callId = callId;
     }
@@ -31,7 +31,7 @@ public class PaymentApproved extends AbstractEvent {
         return status;
     }
 
-    public void setStatus(String Status) {
+    public void setStatus(String status) {
         System.out.println("\n\n##### PaymentApproved test >> PaymentApproved.setStatus()    " + status);
         this.status = status;
     }
